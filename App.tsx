@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text, StatusBar, Button, Image, Dimensions, ImageBackground } from "react-native";
+import { View, Text, StatusBar, Button, Image, Dimensions } from "react-native";
 import {
   MaterialCommunityIcons,
   AntDesign,
