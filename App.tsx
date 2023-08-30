@@ -10,6 +10,8 @@ import { openBrowserAsync } from 'expo-web-browser';
 import { Link } from "@react-navigation/native";
 import { Linking } from "react-native";
 
+//import background from '../assets/images/background1.png';
+
 const Layout = {
   height: Dimensions.get("window").height,
   width: Dimensions.get("window").width
@@ -92,6 +94,12 @@ export default function App(props: any){
   return(
     <ScrollView horizontal >
       <ScrollView style = {{ flex: 1 }} >
+
+        <ImageBackground 
+          style = {{ flex: 1, justifyContent: 'space-evenly', opacity: 20 }}
+          source = { require('./assets/images/background5.jpg')}
+          //source = {{ uri: 'https://as2.ftcdn.net/v2/jpg/02/12/65/93/1000_F_212659341_3teZ8qGtRuBx2zVfzOjoIrEJv4q7WuuQ.jpg' }}
+        > 
       
         <StatusBar 
         translucent = { false }
@@ -527,7 +535,20 @@ export default function App(props: any){
                 fontSize: 18 
               }}
             >
-              5. Personal Website Design   
+              5. Personal Website Design 
+
+              <Text
+                style = {{
+                  color: Colors.themeLight,
+                  fontFamily: "Courier New",
+                  fontSize: 15,
+                  fontWeight: "600"
+                }}
+                onPress={() => Linking.openURL('https://github.com/WebDevelopment-Project/PortfolioWebsite')}
+              >
+                {'  '}Git Link 
+              </Text>
+                
             </Text>
             <Text
               style = {{
@@ -564,6 +585,8 @@ export default function App(props: any){
           </View>
 
         </View>
+
+        </ImageBackground>
 
       </ScrollView>
       
