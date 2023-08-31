@@ -542,7 +542,8 @@ export default function App(props: any){
                   color: Colors.themeLight,
                   fontFamily: "Courier New",
                   fontSize: 15,
-                  fontWeight: "600"
+                  fontWeight: "600",
+                  alignItems: 'flex-end'
                 }}
                 onPress={() => Linking.openURL('https://github.com/WebDevelopment-Project/PortfolioWebsite')}
               >
